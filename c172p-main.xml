@@ -1060,6 +1060,12 @@ http://forum.flightgear.org/viewtopic.php?f=4&t=25157
             <maximum-landing-mass-lbs>2550</maximum-landing-mass-lbs>
         </mass-and-balance-180hp>
 
+        <mass-and-balance-210hp>
+            <maximum-ramp-mass-lbs>2700</maximum-ramp-mass-lbs>
+            <maximum-takeoff-mass-lbs>2800</maximum-takeoff-mass-lbs>
+            <maximum-landing-mass-lbs>2800</maximum-landing-mass-lbs>
+        </mass-and-balance-210hp>        
+        
         <mass-and-balance>
             <!-- Define some nodes for the Fuel and Payload dialog.
                  Aliasing is done later in Nasal/c172p.nas.
