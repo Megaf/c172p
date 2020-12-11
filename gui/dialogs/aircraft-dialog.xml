@@ -458,6 +458,43 @@
                         <value>8.0</value>
                     </binding>
                 </radio>
+             
+                <radio>
+                    <halign>left</halign>
+                    <label>210 HP</label>
+                    <property>sim/model/c172p/engine_flag_1</property>
+                    <live>true</live>
+                    <enable>
+                        <not>
+                            <property>/sim/freeze/replay-state</property>
+                        </not>
+                    </enable>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                            setprop("/controls/engines/active-engine", 1);
+                            setprop("controls/engines/engine/primer", 0);
+                            setprop("sim/model/c172p/engine_flag_0", 0);
+                            setprop("sim/model/c172p/engine_flag_1", 1);
+                        </script>
+                    </binding>
+                    <binding>
+                        <command>dialog-show</command>
+                        <dialog-name>c172p-oil-dialog-210</dialog-name>
+                    </binding>
+                    <binding>
+                        <command>dialog-close</command>
+                        <dialog-name>c172p-oil-dialog-210</dialog-name>
+                    </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/engines/active-engine/oil-level</property>
+                        <value>8.0</value>
+                    </binding>
+                </radio>          
             </group>
         </group>
 
